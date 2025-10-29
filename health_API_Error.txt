@@ -1,0 +1,100 @@
+[root@da19p-asa1-001 roshan]# curl -v https://hbdchealth.uidai.gov.in/health/otp/hbdc
+*   Trying 10.153.99.13:443...
+* Connected to hbdchealth.uidai.gov.in (10.153.99.13) port 443 (#0)
+* ALPN, offering h2
+* ALPN, offering http/1.1
+*  CAfile: /etc/pki/tls/certs/ca-bundle.crt
+* TLSv1.0 (OUT), TLS header, Certificate Status (22):
+* TLSv1.3 (OUT), TLS handshake, Client hello (1):
+* TLSv1.2 (IN), TLS header, Certificate Status (22):
+* TLSv1.3 (IN), TLS handshake, Server hello (2):
+* TLSv1.2 (IN), TLS header, Certificate Status (22):
+* TLSv1.2 (IN), TLS handshake, Certificate (11):
+* TLSv1.2 (IN), TLS header, Certificate Status (22):
+* TLSv1.2 (IN), TLS handshake, Server key exchange (12):
+* TLSv1.2 (IN), TLS header, Certificate Status (22):
+* TLSv1.2 (IN), TLS handshake, Server finished (14):
+* TLSv1.2 (OUT), TLS header, Certificate Status (22):
+* TLSv1.2 (OUT), TLS handshake, Client key exchange (16):
+* TLSv1.2 (OUT), TLS header, Finished (20):
+* TLSv1.2 (OUT), TLS change cipher, Change cipher spec (1):
+* TLSv1.2 (OUT), TLS header, Certificate Status (22):
+* TLSv1.2 (OUT), TLS handshake, Finished (20):
+* TLSv1.2 (IN), TLS header, Finished (20):
+* TLSv1.2 (IN), TLS header, Certificate Status (22):
+* TLSv1.2 (IN), TLS handshake, Finished (20):
+* SSL connection using TLSv1.2 / ECDHE-RSA-AES128-GCM-SHA256
+* ALPN, server did not agree to a protocol
+* Server certificate:
+*  subject: C=IN; ST=Karnataka; L=Bengaluru; O=UNIQUE IDENTIFICATION AUTHORITY OF INDIA; CN=*.uidai.gov.in
+*  start date: Jul 31 04:46:07 2025 GMT
+*  expire date: Aug 25 04:46:07 2026 GMT
+*  subjectAltName: host "hbdchealth.uidai.gov.in" matched cert's "*.uidai.gov.in"
+*  issuer: C=IN; OU=emSign PKI; O=eMudhra Technologies Limited; CN=emSign SSL CA - G1
+*  SSL certificate verify ok.
+* TLSv1.2 (OUT), TLS header, Unknown (23):
+> GET /health/otp/hbdc HTTP/1.1
+> Host: hbdchealth.uidai.gov.in
+> User-Agent: curl/7.76.1
+> Accept: */*
+>
+* OpenSSL SSL_read: Connection reset by peer, errno 104
+* Closing connection 0
+* TLSv1.2 (OUT), TLS header, Unknown (21):
+curl: (56) OpenSSL SSL_read: Connection reset by peer, errno 104
+
+******************************************************************************************************************************
+
+[root@da19p-asa1-001 roshan]# curl -v https://hbdchealth.uidai.gov.in/health/otp/hbdc
+*   Trying 10.153.99.13:443...
+* Connected to hbdchealth.uidai.gov.in (10.153.99.13) port 443 (#0)
+* ALPN, offering h2
+* ALPN, offering http/1.1
+*  CAfile: /etc/pki/tls/certs/ca-bundle.crt
+* TLSv1.0 (OUT), TLS header, Certificate Status (22):
+* TLSv1.3 (OUT), TLS handshake, Client hello (1):
+* TLSv1.2 (IN), TLS header, Certificate Status (22):
+* TLSv1.3 (IN), TLS handshake, Server hello (2):
+* TLSv1.2 (IN), TLS header, Certificate Status (22):
+* TLSv1.2 (IN), TLS handshake, Certificate (11):
+* TLSv1.2 (IN), TLS header, Certificate Status (22):
+* TLSv1.2 (IN), TLS handshake, Server key exchange (12):
+* TLSv1.2 (IN), TLS header, Certificate Status (22):
+* TLSv1.2 (IN), TLS handshake, Server finished (14):
+* TLSv1.2 (OUT), TLS header, Certificate Status (22):
+* TLSv1.2 (OUT), TLS handshake, Client key exchange (16):
+* TLSv1.2 (OUT), TLS header, Finished (20):
+* TLSv1.2 (OUT), TLS change cipher, Change cipher spec (1):
+* TLSv1.2 (OUT), TLS header, Certificate Status (22):
+* TLSv1.2 (OUT), TLS handshake, Finished (20):
+* TLSv1.2 (IN), TLS header, Finished (20):
+* TLSv1.2 (IN), TLS header, Certificate Status (22):
+* TLSv1.2 (IN), TLS handshake, Finished (20):
+* SSL connection using TLSv1.2 / ECDHE-RSA-AES128-GCM-SHA256
+* ALPN, server did not agree to a protocol
+* Server certificate:
+*  subject: C=IN; ST=Karnataka; L=Bengaluru; O=UNIQUE IDENTIFICATION AUTHORITY OF INDIA; CN=*.uidai.gov.in
+*  start date: Jul 31 04:46:07 2025 GMT
+*  expire date: Aug 25 04:46:07 2026 GMT
+*  subjectAltName: host "hbdchealth.uidai.gov.in" matched cert's "*.uidai.gov.in"
+*  issuer: C=IN; OU=emSign PKI; O=eMudhra Technologies Limited; CN=emSign SSL CA - G1
+*  SSL certificate verify ok.
+* TLSv1.2 (OUT), TLS header, Unknown (23):
+> GET /health/otp/hbdc HTTP/1.1
+> Host: hbdchealth.uidai.gov.in
+> User-Agent: curl/7.76.1
+> Accept: */*
+>
+* TLSv1.2 (IN), TLS header, Unknown (23):
+* Mark bundle as not supporting multiuse
+< HTTP/1.1 500
+< Content-Type: application/json
+< Transfer-Encoding: chunked
+< Date: Tue, 28 Oct 2025 08:33:41 GMT
+< Connection: close
+<
+* TLSv1.2 (IN), TLS header, Unknown (23):
+* Closing connection 0
+* TLSv1.2 (OUT), TLS header, Unknown (21):
+* TLSv1.2 (OUT), TLS alert, close notify (256):
+{"timestamp":"2025-10-28T08:33:41.982+00:00","status":500,"error":"Internal Server Error","message":"","path":"/health/otp/hbdc"}[root@da19p-asa1-001 roshan]#
